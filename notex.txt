@@ -1,0 +1,266 @@
+JAVASCRIPT
+===========
+-used to make webpages dynamic
+-node js: provide js runtime environment  + js libraries
+-Basic concepts in JAVASCRIPT
+       -console.log()= used to display contents
+-datatypes :tells the computer what kind of information you are working with
+2 types:
+   -Primitive datatypes : they store simple values
+                  -Number: any number ex:11,22,23.5,234.89
+                  -string: text or words ex:"hello",'hi welcome'
+                  -boolean: true or false
+                  -undefined: a variable with no value yet, 
+                              ex:let x,// x is undefined
+                  -null:  means 'no value' ,let y=null
+                  -bigInt:  very big integer
+                  -symbol:  unique identifier (special kind of value),
+                           ex:symbol("id")
+   -Non-primitive datatypes:they store more complex data
+                  -Array:  list of values
+                  -object: collection of data(key:value pair)
+
+-identifier : a unique name created by the programmers to define variable,
+              class functions etc.
+       -rules for creating identifier
+             -can have letters(upper & lower),digits and underscore
+             -the first letter should be either letter or underscore
+             -cannot use keyword as identifier
+
+-keywords : reserved words ex:if,selse switch,break etc.
+
+-Variable : used to store data temporarily
+
+    -using var keyword
+              syntax: 
+                     var variable_name/var variable_name=initial_value
+    -using const keyword
+              syntax:
+                     const variable_name=initial_value
+    -using let keyword
+              syntax:
+                     let variable_name/let variable_name=initial_value
+
+
+-Joining different types of data in js
+     -using coma(,)
+     -using + (concatenation)
+     -using template literals(`)
+
+     
+ scope-it is a term that where the variable can access on the file
+ scope=global/block/local
+
+ -hoisting : it is a javascript behaviour where variable 
+             and function declaration are moved to the top
+             of their scope during the compilation phase,
+             before the code executed.
+
+-----var-----
+ -use var keyword
+ -reassign with any types of data
+ -Global scope-can access the file anywhere
+ -hoisted with undefined
+
+ -----const------
+ -use const keyword
+ -cannot reassign its value
+ -block scope
+ -hoisted without value
+
+ ------let-------
+ -use let keyword
+ -can reassign its value
+ -block scope
+ -hoisted without value
+
+ -operators in JS 
+    1.Assignment Operators(=): used to assign values
+            variable_name=value
+    2.Arithmetic Operators: used to perform math operations
+            + addition
+            - substraction
+            * multiplication
+            / division
+            % modulus
+            ** exponentiation
+    3.Relational(comparison) Operators: used to compare values(return true or false)
+             == equal
+             === strict equal
+             != not equal
+             > greater than
+             < less than
+             >= greater than or equal
+             <= less than or equal
+     4.Logical Operators:
+             && and
+             || or
+             ! not
+
+     ---------and---------------or------------not---------
+          
+          T && T = T       T || T = T         F!=T 
+          T && F = F       T || F = T         T!=F
+          F && T = F       F || T = T 
+          F && F = F       F || F = F 
+
+     5.Unary Operators:works on a single operand
+            ++ increment
+            -- decrement
+
+     6.Shorthand Operators:(+=,-=,*=,/=)
+
+     7. Truthy Operator(&&)
+           syntax:condition && Statement
+     
+     8.Ternary Operator(?:)
+       syntax:condition ? true statement : false statement
+
+-Conditional Statements in JS
+  -if
+      syntax:
+             if(condition){
+              stmts
+             }
+
+   -if else
+           syntax:
+                if(condition){
+                     stmts
+                }
+                else{
+                     stmts
+                }
+
+   -else if ladder
+             syntax:
+                   if(condition){
+                     stmts
+                   }
+                   else if(){
+                     stmts
+                   }
+                   else{
+                     stmts
+                   }
+   -switch
+          syntax:
+                switch(expression){
+                     case 1:
+                           stmts
+                           break
+                     case 2:
+                           stmts
+                           break
+                     default{
+                            
+                     }
+
+                }
+
+-looping Statements : are used to repeate a block of code multiple times as long as a given conditionis true
+                 -for loop
+                        Syntax:
+                               for(initialization;condition;increment/decrement){
+                                   Statement
+                               }
+
+                 -while loop
+                        Syntax:
+                               while(condition) {
+                                   Statements
+                               }
+                  
+                 -do while loop : it is a looping statement that executes the block at least once
+                                  and then check the condition is true
+                        Syntax:
+                               do {
+                                   Statements
+                               }while(condition)    
+
+-break : terminates the loop immediately when a condition is met                  
+-continue : skip the current loop iteration and continues with the next iteration
+
+-function : A function is a block of code that performs a special task and run only when it is called.
+
+         -function definition
+                   syntax:
+                         function function_name(parameters){
+                     function body
+                   }
+         -function call
+                   function_name(arguments)
+
+-return : sends value back to where function is called
+
+-Types of functions:
+         -Arrow functions : Alternative for function definition
+                syntax:
+                       const variable_name=(parameters)=>{
+                            function body
+                       }
+          -pre defined functions :
+              ex: console.log(),math.floor(),math.ceil() 
+
+          -callback function : a function definition inside a function call,completes its execution only after
+          the completion of the function inside it.
+          -anonymous function :self executing function and nameless function 
+
+          -nested function : function definiton inside another funtion definition      
+                           -Closure is the ability of a nested function to
+                            access and remember variables from its outer
+                            function scope even after the outer function has returned
+          
+          -reccurssive function : calling a function inside its own function.
+
+- Array:
+        An array is a data structure in js that 
+        allows us to store multiple values of 
+        any data type in a single variables
+
+        -syntax: variable_name=[] / variable_name=["item1","item2","item3"....]
+        -type of an array is an "OBJECT"
+        -index : position number used to identify and access elements in an array
+        -accessing an array element : array_name[index]
+        -to find total elements stored in an array
+            syntax: array_name.length
+        -to access array elements
+            -using for-loop
+            -using for-of loop
+            -using for-in loop
+       - Array Methods : pre-defined methods to manipulate array data
+            -push(item) : used to insert data at the end of an array
+            -unshift(item) : used to insert data at the first of an array
+            -pop() : used to remove last element of array
+            -shift(): used to remove the first element of an array
+            -foreach : used to loop through each element
+               syntax:
+                   foreach((element,index,array)=>console.log(element))
+
+                   -element-current value in the array
+                   -index-current index(optional)
+                   -array-original array(optional)
+
+            -filter : used to create a new array with elements that pass
+                      a certain condition
+              syntax:
+                   foreach((element,index,array)=>condition)
+
+            -find() : used to return the first element in 
+                      an array that satisfies a condition
+                     syntax:
+                           find((element,index,array)=>condition)
+
+            -map() : used to transform each elements of an array and
+                     return new array 
+                     syntax:
+                           map((element,index,array)=>newvalue) 
+
+            -reduce() : method is used to reduce an array to a single value.
+                        it return either smallest/largest/total sum of elements
+                        in an array 
+
+            -some() : used to check whether atleast one element in an array satisfies
+                      a given condition (return boolean value)                         
+
+                             
