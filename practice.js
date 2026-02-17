@@ -429,54 +429,171 @@
 // --------DAY-6---------
 // ---------1---------
 // given an array,print all elements
-arr=[10,20,30,40]
-for(let i=0;i<arr.length;i++){
-    console.log(arr[i]);
-}
+// arr=[10,20,30,40]
+// for(let i=0;i<arr.length;i++){
+//     console.log(arr[i]);
+// }
 
 // ------2-------
 // find the largest number in an array
-lar=[5,12,3,19,8]
-let largest=0
-for(let i=0;i<lar.length;i++){
-    if(lar[i]>largest){
-        largest=lar[i]
-    }
-}console.log("largest:",largest);
+// lar=[5,12,3,19,8]
+// let largest=0
+// for(let i=0;i<lar.length;i++){
+//     if(lar[i]>largest){
+//         largest=lar[i]
+//     }
+// }console.log("largest:",largest);
 
 
 // ------3-------
 // find the smallest number in an array
-lar=[5,12,3,19,8]
-let smallest=lar[0]
-for(let i=0;i<lar.length;i++){
-    if(lar[i]<smallest){
-        smallest=lar[i]
-    }
-}console.log("smallest:",smallest);
+// lar=[5,12,3,19,8]
+// let smallest=lar[0]
+// for(let i=0;i<lar.length;i++){
+//     if(lar[i]<smallest){
+//         smallest=lar[i]
+//     }
+// }console.log("smallest:",smallest);
 
 // -------4--------
 // sum of elements
-a=[10,20,30]
-let sum=0
-for(let i=0;i<a.length;i++){
-    sum+=a[i]
-}  console.log(sum);
+// a=[10,20,30]
+// let sum=0
+// for(let i=0;i<a.length;i++){
+//     sum+=a[i]
+// }  console.log(sum);
 
 // ------5-------
 // count even & odd numbers
-b=[1,2,3,4,5]
-let countEven=0
-let countOdd=0
-for(let i=0;i<b.length;i++){
-    if(b[i]%2==0){
-        countEven++
-    }else{
-        countOdd++
-    }
-}
-console.log(`even: ${countEven}`);
-console.log(`odd: ${countOdd}`);
+// b=[1,2,3,4,5]
+// let countEven=0
+// let countOdd=0
+// for(let i=0;i<b.length;i++){
+//     if(b[i]%2==0){
+//         countEven++
+//     }else{
+//         countOdd++
+//     }
+// }
+// console.log(`even: ${countEven}`);
+// console.log(`odd: ${countOdd}`);
+
+
+// --------DAY-7-------
+// ---------1----------
+// Find second largest element
+// arr=[5,10,3,19,8]
+// let largest=arr[0]
+// let secondLargest=arr[0]
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]>largest){
+//         secondLargest=largest
+//         largest=arr[i]
+//         if(arr[i]>largest){
+//             secondLargest=arr[i]
+//         }
+//     }
+// }
+// console.log(`${secondLargest}`);
+
+// --------2-------
+// check whether an element is exists in array
+// arr=[10,20,30,40]
+// let search=10
+// isfound=false
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]==search){
+//         isfound=true
+//         break
+//     }
+// }console.log(isfound?"found":"not found");
+
+// -------3--------
+// count positive/negative/zero
+// arr=[3,-1,0,5,-9]
+// let pos=0,neg=0,zero=0
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]>0){
+//         pos++
+//     }else if(arr[i]<0){
+//         neg++
+//     }else{zero++}
+// }console.log(`positive:${pos}`);
+// console.log(`negative:${neg}`);
+// console.log(`zero:${zero}`);
+
+// -------4------
+// reverse array
+// arr=[10,20,30,40]
+// for(let i=arr.length-1;i>=0;i--){
+//     console.log(arr[i]);
+// }
+
+// ------5------
+// sum of even numbers
+// arr=[1,2,3,4,5,6]
+// let sum=0
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]%2==0){
+//         sum+=arr[i]
+//     }
+// }console.log(`sum of even number is ${sum}`);
+
+// array-methods
+// -----1-----
+// add & remove elements
+// arr=[10,20,30]
+// arr.push(40)
+// console.log(arr);
+// arr.unshift(5)
+// console.log(arr);
+// arr.pop()
+// console.log(arr);
+// arr.shift()
+// console.log(arr);
+
+// -------2------
+// replace element
+// arr=[10,20,30,40]
+// arr.splice(2,1,35);
+// console.log(arr);
+
+// -------3--------
+// extract portion
+// arr = [5,10,15,20,25,30]
+// console.log(arr.slice(2,-1));
+
+// -------4-------
+// element existence check
+// arr = [100,200,300,400]
+// console.log(arr.includes(500)?'exists':'not exists');
+// console.log(arr.indexOf(300));
+
+// --------5---------
+// insert without removing
+// arr = [10,20,40,50]
+// arr.splice(2,0,30)
+// console.log(arr);
+
+// ------6-----
+// remove specific value
+arr = [10,20,30,40,50]
+arr.splice(1,1)
+console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

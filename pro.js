@@ -40,7 +40,7 @@ console.log(product.reduce((a,b)=>a[3]>b[3]?a:b)[1]);
 
 // is there is any product can be purchased by rs:50
 console.log("-----PRODUCT:RS-50------");
-console.log(product.some(d=>d[2]>50)?'YES':'NO');
+console.log(product.some(d=>d[2]<=50)?'YES':'NO');
 
 // is there is any product in the range of 10 to 30
 console.log("-----PRODUCT btw 10 to 30------");
@@ -48,4 +48,4 @@ console.log(product.some(d=>d[2]>10 && d[2]<30)?'YES':'NO');
 
 // display all products in the range of 10-30
 console.log("-----PRODUCT btw 10 to 30------");
-
+product.filter(d=>d[2]>10 && d[2]<30).forEach(d=>console.log(d[1],d[2]));

@@ -244,7 +244,7 @@ JAVASCRIPT
             -filter : used to create a new array with elements that pass
                       a certain condition
               syntax:
-                   foreach((element,index,array)=>condition)
+                   filter((element,index,array)=>condition)
 
             -find() : used to return the first element in 
                       an array that satisfies a condition
@@ -261,6 +261,89 @@ JAVASCRIPT
                         in an array 
 
             -some() : used to check whether atleast one element in an array satisfies
-                      a given condition (return boolean value)                         
+                      a given condition (return boolean value)   
+
+            -flat() : used to flatten a nested array into a single-level array
+                     syntax:
+                            array.flat(depth)
+                     depth : optional,specify how deep the nested array should be flattened
+                     default value=1                                
+            
+            -includes(item) : used to check whether an array contains a specific value,return boolean value
+                      syntax: array.include(value,startIndex)
+                          value: value to search
+                          startIndex: optional(default=0)
+
+            -indexOf() : return the index position of a value in an array
+                     syntax: array.indexOf(value,startIndex)
+                          value: value to search
+                          startIndex: optional(default=0)
+                             
+             -splice() : used to add elements,remove elements and replace elements
+                         from the existing array .(it modifies the original array) 
+                     syntax: array.splice(startIndex,deleteCount,item1,item2,.,.,.,.,)
+
+                      -startIndex: Where to start
+                      -deleteCount: how many element to remove            
+                      -item1,item2...-elements to insert(optional)
+              
+             -join() : converts an array into a string by joining all elements
+                     syntax: array.join(seperator)
+
+                       -seperator: optional(default value is comma(,))
+
+-String : is sequence of characters used to represent Text in js,strings are written inside
+         -"double quotes"
+         -'single quotes'
+         -`backticks(template literals)`
+
+         -length can be used to find the no.of characters in the string
+
+         METHODS :
+          
+        -substring() : extracts a part of a string and returns a new string
+           syntax : array.substring(startIndex,endIndex)
+
+           -startIndex: required
+           -endIndex: optional
+           -it extracts characters from startIndex up to (but not including) endIndex
+
+       -startsWith() : check whether a string starts with a specifc value.it return true/false
+
+       -endsWith() : check whether a string ends with a specifc value.it return true/false
+
+       -toLowerCase() : converts all the characters in a string to lowercase
+
+       -toUpperCase() : converts all the characters in a string to uppercase
+
+       -trim() : remove white spaces from both sides of a string
+
+       -split() : converts a string into an array by splitting it based on a seperator
+                syntax : string.split(seperator)
+                -seperator : required (where to split)
+
+       -includes() : checks whether a string contains a specified text
+
+       -slice() : used to extract a portion of an array or string and return it as a new array
+                 -syntax : string.slice(startIndex,endIndex)
+                  -startIndex: required
+                  -endIndex: optional
+                  -it extracts characters from startIndex up to (but not including) endIndex
+
+-Object : used to store multiple data in a single variable.
+        -data stored as key:value pair
+        syntax : object_name={key:value,key:value,.,.,.,}
+        -key : to access data from an object
+           syntax : object_name[key]/object_name.key
+        -'in' operator : used to check a key present in an object or not
+               syntax: key in object_name
+               -return true or false
+        -hasOwnProperty(key) : said to check a key present in an object or not
+        -Object.keys(object_name) : return an array,which contains key in an object
+        -Object.values(object_name) : return an array,which contains values in an object
+        -Object.assign(object_name,{key:value},.,.,) : to add a data or copy properties from one or more source object into target object
+
+
+
 
                              
