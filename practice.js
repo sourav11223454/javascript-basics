@@ -577,9 +577,140 @@
 
 // ------6-----
 // remove specific value
-arr = [10,20,30,40,50]
-arr.splice(1,1)
-console.log(arr);
+// arr = [10,20,30,40,50]
+// arr.splice(1,1)
+// console.log(arr);
+
+// -----task-1=join()---
+// array=['apple','banana','orange']
+// console.log(array.join('|'));
+
+// // ------task-2=forEach()-----
+// a=[10,20,30]
+// a.forEach(d=>console.log(d))
+
+// // ----task-3=map()-----
+// b=[1,2,3,4]
+// console.log(b.map(d=>d**2));
+
+// // ----task-4=filter()-----
+// c=[5,12,8,130,44]
+// console.log(c.filter(d=>d>10));
+
+// // -----task-5=reduce()-----
+// cd=[10,20,30,40]
+// console.log(cd.reduce((sum,b)=>sum+b,0));
+
+// // -----task-6=some()
+// e=[3,7,11,18]
+// console.log(e.some(d=>d%2==0)?"yes":"No");
+
+// // -----task-7=find()
+// f=[4,9,16,25]
+// console.log(f.find(d=>d>10));
+
+// // ------task-8=flat()
+// g=[1,2,[3,4],[5,[6,7]]]
+// console.log(g.flat(Infinity));
+
+// // ------task-9=map()
+// h=[10,15,20,25]
+// console.log(h.map(d=>d%2==0?"even":"odd"));
+
+// // -------task-10=filter()
+// i=["cat","elephant","dog","tiger"]
+// console.log(i.filter(d=>d.length>3));
+
+
+// // ------DAY-8-------
+// // -------1--------
+// a=[1,2,3,4,5,6]
+// console.log(a.reduce((sum,b)=>b%2==0?sum+b:sum,0));
+
+// // -------2-------
+// // multiply all numbers
+// arr=[10,15,20,25]
+// console.log(arr.reduce((sum,b)=>sum*b));
+
+// // -------3-------
+// // check if all numbers are positive
+// b=[3,7,10,13]
+// console.log(b.some(d=>d>0));
+
+// // -------4-------
+// // find first word with length>5
+// c=["apple","banana","kiwi","fig"]
+// console.log(c.find(d=>d.length>5));
+
+// // ------5-----
+// // check if all numbers are even
+// d=[2,4,6,7,8]
+// console.log(d.every(f=>f%2===0));
+
+// // ------6-------
+// // create new array->divide each no by 2
+// e=[5,12,8,130,44]
+// console.log(e.map(d=>d/2));
+
+// // --------1--------
+// // product of only even numbers
+// a=[1,2,3,4,5,6]
+// console.log(a.reduce((sum,b)=>b%2==0?sum*b:sum,1));
+
+// // --------2-------
+// // check if any number>30
+// b=[10,15,20,25]
+// console.log(b.some(d=>d>30));
+
+// // ------3-------
+// // length of first word>4
+// c=["cat","elephant","dog","tiger"]
+// console.log(c.find(d=>d.length>4).length);
+
+// // ------4-------
+// // sum of numbers>10
+// d=[5,12,8,130,44]
+// console.log(d.reduce((sum,b)=>b>10?sum+b:sum,0));
+
+// ---------1--------
+// Average of numbers > 10
+a=[5,12,8,130,44]
+console.log(a.reduce((sum,b)=>b>10?sum+b%b.length:sum,0));
+
+// -------2-------
+// Count of even numbers
+b=[1,2,3,4,5,6]
+console.log(b.find(d=>d%2==0).length);
+
+// ------3--------
+// Total characters count
+c=["apple","banana","kiwi","fig"]
+console.log(c.find(d=>d.length).length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

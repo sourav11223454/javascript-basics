@@ -46,20 +46,19 @@ var car={
     price:"13 L"
 }
 // display car name and its manufacturer
-console.log(car["name"],car["manufacturer"]);
+console.log(car.name,car.manufacturer);
 
 // check model key is present,then display its value
 car.hasOwnProperty("model")?console.log(car["model"]):console.log("model is not defined");
 
 // add variant as automatic and manual
-console.log(Object.assign(car,{variant:"automatic,manual"}));
+console.log(Object.assign(car,{variant:["automatic","manual"]}));
 
 // add colors as red,blue,white,ash,black
-console.log(Object.assign(car,{colors:"red,white,blue,ash,black"}));
+console.log(Object.assign(car,{colors:["red","white","blue","ash","black"]}));
 
 // add hybrid variant
-car.variant+=",hybrid"
-// console.log(Object.assign(car,{variant:"hybrid"}));
+car.variant.push("hybrid")
 console.log(car);
 
 
