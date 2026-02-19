@@ -116,6 +116,9 @@ JAVASCRIPT
      8.Ternary Operator(?:)
        syntax:condition ? true statement : false statement
 
+     9.Spread Operator(...) : used to expand(spread out) elements of an array,
+       object or iterable into individual element
+
 -Conditional Statements in JS
   -if
       syntax:
