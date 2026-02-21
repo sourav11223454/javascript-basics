@@ -674,18 +674,59 @@
 
 // ---------1--------
 // Average of numbers > 10
-a=[5,12,8,130,44]
-console.log(a.reduce((sum,b)=>b>10?sum+b%b.length:sum,0));
+// a=[5,12,8,130,44]
+// console.log(a.reduce((sum,b)=>b>10?sum+b%b.length:sum,0));
 
-// -------2-------
-// Count of even numbers
-b=[1,2,3,4,5,6]
-console.log(b.find(d=>d%2==0).length);
+// // -------2-------
+// // Count of even numbers
+// b=[1,2,3,4,5,6]
+// console.log(b.find(d=>d%2==0).length);
 
-// ------3--------
-// Total characters count
-c=["apple","banana","kiwi","fig"]
-console.log(c.find(d=>d.length).length);
+// // ------3--------
+// // Total characters count
+// c=["apple","banana","kiwi","fig"]
+// console.log(c.find(d=>d.length).length);
+
+// // ------4-------
+// // sum of even numbers greater than 10
+// let even=a.reduce((sum,b)=>{
+//     if(b>10&&b%2==0){
+//         return sum+b
+//     }
+//     return sum
+// },0)
+// console.log(even);
+
+
+// STRING-METHODS
+// ------DAY-8-------
+a='javascript'
+console.log(a.toUpperCase());
+
+b='HELLO WORLD'
+console.log(b.toLowerCase());
+
+c='I Love Programming'
+console.log(c.includes('Love'));
+
+d="OpenAI"
+console.log(d.slice(4));
+
+e="apple,banana,mango"
+console.log(e.split());
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

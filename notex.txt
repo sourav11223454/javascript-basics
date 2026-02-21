@@ -347,6 +347,20 @@ JAVASCRIPT
         -Object.assign(object_name,{key:value},.,.,) : to add a data or copy properties from one or more source object into target object
 
 
+OOP (Object Oriented Programming)
+---------------------------------
 
+OOP is a programming approach where we create programs using object that contains
+       .data(properties)
+       .functions(methods)
+
+it models real-world entities(like student,car,bank account) as object in software
+
+ -class: blueprint defining structure and behaviour of objects
+ -object: runtime instance of a class withstate and behaviour
+ -reference: 'this' keyword:refers to the current object that is executing the function.
+          it is used to access properties and methods belonging to the same object.
+ -constructor: is a special method in a class that is automatically called when an object is created.
+               it is mainly used to initialize object properties.
 
                              
