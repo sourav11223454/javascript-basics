@@ -92,7 +92,6 @@ console.log(credit);
 console.log('----CREDIT AMT TO 1002-----');
 console.log(credit.reduce((sum,b)=>sum+b.amount,0));
 
-
 // 8.print debit transaction of account 1002
 console.log('----DEBIT transaction OF 1002-----');
 let debit=accounts.filter(d=>d.acno==1002)

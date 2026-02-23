@@ -700,20 +700,337 @@
 
 // STRING-METHODS
 // ------DAY-8-------
-a='javascript'
-console.log(a.toUpperCase());
+// a='javascript'
+// console.log(a.toUpperCase());
 
-b='HELLO WORLD'
-console.log(b.toLowerCase());
+// b='HELLO WORLD'
+// console.log(b.toLowerCase());
 
-c='I Love Programming'
-console.log(c.includes('Love'));
+// c='I Love Programming'
+// console.log(c.includes('Love'));
 
-d="OpenAI"
-console.log(d.slice(4));
+// d="OpenAI"
+// console.log(d.slice(4));
 
-e="apple,banana,mango"
-console.log(e.split());
+// e="apple,banana,mango"
+// console.log(e.split());
+
+// ---------DAY-9--------
+// ---------1------------
+// count vowels
+// a='javascript'
+// let vowels=['a','e','i','o','u']
+// console.log(a.split('').filter(d=>vowels.includes(d)).length);
+
+// // -------2--------
+// // number of words
+// b='i love programming'
+// console.log(b.split(' ').length);
+
+// // --------3--------
+// // capitalise first letter only
+// c="javascript is fun"
+// console.log(c[0].toUpperCase()+c.slice(1));
+
+// // --------4--------
+// // Capitalize EVERY word
+// d="I love programming"
+// let result=d.split(' ').map(word=>word[0].toUpperCase()+word.slice(1)).join(' ')
+// console.log(result);
+
+// // -------5-------
+// // replace '-'
+// e="hello_world_javascript"
+// console.log(e.split('_').join(' '));
+
+// // -------6-------
+// // reverse
+// f="javascript"
+// console.log(f.split('').reverse().join(''));
+
+// // -------7-------
+// g="javascript is fun"
+// console.log(g.split(" ").join(''));
+
+// // -----8-------
+// // Replace "JS" → "JavaScript"
+// h='I Love JS'
+// console.log(h.replace('JS','Javascript'));
+
+
+// // ------9------
+// // find longest word
+// i="apple banana mango"
+// let split=i.split(' ')
+// console.log(split.reduce((a,b)=>a.length>b.length?a:b));
+
+// // ------10------
+// // remove vowels
+// j='javascript'
+// let vowelss=['a','e','i','o','u']
+// console.log(j.split('').filter(d=>vowels.includes(d)).join(''));
+
+// // -------11------
+// // count words
+// k="I love programming"
+// console.log(k.split(' ').join('').length);
+
+
+// ---------DAY-10--------
+//----------1----------
+// accessing & modifying property
+student = {
+    name: "Sourav",
+    marks: 75
+}
+console.log("name:",student.name);
+if(student.marks>=75){
+    console.log("grade : distinction");
+}else if(student.marks>=60){
+    console.log("grade:first class");
+}else{
+    console.log("grade:pass");
+}
+
+// -------2--------
+product = {
+    name: "Laptop",
+    price: 50000
+}
+console.log(Object.assign(product,{discount:10}));
+
+// ------3------
+calculator = {
+    substract(a,b) {
+        return a-b
+     },
+    divide(a,b) { 
+       return a/b
+    }
+}
+console.log(calculator.substract(10,5));
+console.log(calculator.divide(10,5));
+
+// --------4--------
+user = {
+   username: "admin",
+   password: "1234"
+}
+console.log(user.hasOwnProperty("email")?"it exists":"doesn't exists");
+
+// ------5------
+employee = {
+    name: "Rahul",
+    salary: 40000
+}
+if(employee.salary>=50000){
+    console.log("salary category : high salary");
+}else if(employee.salary>=30000){
+    console.log("salary category : medium salary");
+}else{
+    console.log("salary category : low salary");
+}
+
+// --------6--------
+employees = [
+    {eid: 1, name: 'Rahul', dept: 'HR', salary: 25000},
+    {eid: 2, name: 'Anita', dept: 'IT', salary: 60000},
+    {eid: 3, name: 'Kiran', dept: 'Finance', salary: 45000},
+    {eid: 4, name: 'Sneha', dept: 'IT', salary: 70000},
+    {eid: 5, name: 'Amit', dept: 'HR', salary: 30000},
+]
+// Print employee names only
+employees.forEach(d=>console.log(d.name))
+// Print all IT department employees
+console.log(employees.filter(d=>d.dept=='IT'));
+// Print names of employees whose salary > 40000
+let salaryname=employees.filter(d=>d.salary>40000)
+salaryname.forEach(d=>console.log(d.name))
+// Sort employees by salary (Low → High)
+let sortsalary=employees.sort((a,b)=>a.salary-b.salary)
+sortsalary.forEach(d=>console.log(d.name,d.salary))
+// Find highest paid employee
+console.log(employees.reduce((a,b)=>a.salary>b.salary?a:b).name);
+// Find lowest paid employee
+console.log(employees.reduce((a,b)=>a.salary<b.salary?a:b).name);
+// Count number of employees in IT department
+console.log(employees.filter(d=>d.dept=='IT').length);
+// Calculate total salary expense
+console.log(employees.reduce((sum,b)=>sum+b.salary,0));
+// Print employees earning between 30000 & 65000
+console.log(employees.filter(d=>d.salary<=65000 && d.salary>=30000));
+// Check if ANY employee earns more than 80000
+console.log(employees.some(d=>d.salary>80000));
+
+// ---------7---------
+orders = [
+    {
+        oid: 1,
+        customer: "Rahul",
+        items: [
+            {name: "Laptop", price: 50000},
+            {name: "Mouse", price: 500}
+        ]
+    },
+    {
+        oid: 2,
+        customer: "Anita",
+        items: [
+            {name: "Phone", price: 30000},
+            {name: "Charger", price: 800}
+        ]
+    },
+    {
+        oid: 3,
+        customer: "Kiran",
+        items: [
+            {name: "Tablet", price: 20000}
+        ]
+    }
+]
+// Print customer names only
+orders.forEach(d=>console.log(d.customer))
+// Print ALL items from ALL orders
+orders.map(d=>d.items).flat().forEach(d=>console.log(d.name))
+// Calculate TOTAL revenue
+let total=orders.map(d=>d.items).flat().reduce((sum,b)=>sum+b.price,0)
+// Find MOST expensive item
+let expensive=orders.map(d=>d.items).flat()
+console.log(expensive.reduce((a,b)=>a.price>b.price?a:b).name);
+// Print orders where ANY item price > 40000
+orders.filter(order=>order.items.some(item=>item.price>40000)).forEach(order=>console.log(order.customer))
+// Count TOTAL number of items
+console.log(orders.map(d=>d.items).flat().length);
+// Find customer who spent MOST money
+let enriched = orders.map(order => {
+    let total = order.items.reduce((sum,item)=>sum+item.price,0);
+    return {
+        customer: order.customer,
+        totalSpent: total
+    };
+});
+console.log(
+    enriched.reduce((a,b)=>a.totalSpent>b.totalSpent?a:b).customer
+);
+// Print items costing less than 1000
+orders.map(d=>d.items).flat().filter(d=>d.price<1000).forEach(d=>console.log(d.name))
+// Check if ALL orders have at least 1 item
+console.log(orders.some(d=>d.items.length>0));
+// Create NEW array → all item names
+console.log(orders.map(d=>d.items).flat().map(d=>d.name));
+
+
+// ------8------
+students = [
+    {
+        name: "Rahul",
+        marks: [60, 70, 80]
+    },
+    {
+        name: "Anita",
+        marks: [90, 85, 88]
+    },
+    {
+        name: "Kiran",
+        marks: [35, 40, 30]
+    }
+]
+// Print student names only
+students.forEach(d=>console.log(d.name))
+// Calculate TOTAL marks for EACH student
+students.forEach(d=>{
+    let totalmarks=d.marks.reduce((sum,b)=>sum+b,0)
+    console.log(d.name,"=>",totalmarks);
+})
+// Find TOPPER
+console.log(students.reduce((a,b)=>{
+    let totalSumA=a.marks.reduce((sum,m)=>sum+m,0)
+    let totalSumB=b.marks.reduce((sum,m)=>sum+m,0)
+    return totalSumA>totalSumB?a:b
+}).name);
+// Find student with LOWEST marks
+console.log(students.reduce((a,b)=>{
+    let totalSumA=a.marks.reduce((sum,n)=>sum+n,0)
+    let totalSumB=b.marks.reduce((sum,n)=>sum+n,0)
+    return totalSumA<totalSumB?a:b
+}).name);
+// Students with Average ≥ 50
+students.filter(d=>{
+    let average=d.marks.reduce((sum,b)=>sum+b,0)/d.marks.length
+   return average>=50
+}).forEach(d=>console.log(d.name))
+// Check if ANY student failed
+console.log(students.some(d=>d.marks.some(mark=>mark<40)));
+// Count TOTAL number of subjects
+console.log(students.reduce((sum,student)=>sum + student.marks.length, 0));
+//Find BEST average scorer
+console.log(
+
+    students.reduce((a,b) => {
+
+        let avgA = a.marks.reduce((sum,n)=>sum+n,0) 
+                   / a.marks.length;
+
+        let avgB = b.marks.reduce((sum,n)=>sum+n,0) 
+                   / b.marks.length;
+
+        return avgA > avgB ? a : b;
+
+    }).name
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
