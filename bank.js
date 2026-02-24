@@ -5,7 +5,6 @@ class Bank{
         1002:{acno:1002,username:"userthree",password:"userthree",blance:10000},
         1003:{acno:1003,username:"userfour",password:"userfour",blance:6000},
     }
-
     // validate account number function
     validateAccount(accno){
         return this.accountDetails.hasOwnProperty(accno)
@@ -31,36 +30,29 @@ class Bank{
             
         }
     }
-
-
-    
     // function for fund transfer 
-    fundTransfer(FromAcc,ToAcc,password,amount){
-        let sender=this.accountDetails[FromAcc]
-        let receiver=this.accountDetails[ToAcc]
-
-        if(sender==false){
-            console.log("the account is not found");
+    fundTransfer(FromAcc,ToAcc,amount){
+        if(this.accountDetails[FromAcc]&& this.accountDetails[ToAcc]){
+            if(this.accountDetails[FromAcc].blance>=amount){
+                console.log(`before transaction fromacc${FromAcc} and balance${this.accountDetails[FromAcc].blance} and toacc
+                    ${ToAcc} balance ${this.accountDetails[ToAcc].blance} `);
+                    this.accountDetails[FromAcc].blance-=amount
+                    this.accountDetails[ToAcc].blance+=amount
+                    console.log('transaction successfull');
+                    console.log(`after transaction fromacc${FromAcc} and balance${this.accountDetails[FromAcc].blance} and toacc
+                    ${ToAcc} balance ${this.accountDetails[ToAcc].blance} `);
+            }else{
+                console.log('insufficient bank balance');
+                
+            }
+        }else{
+            console.log("invalid account");
+            
         }
-        if(receiver==false){
-            console.log("the receiver's account is not found");
-        }
-        if(sender.password!==password){
-            console.log("password incorrect");
-        }
-        if(sender.blance>amount){
-            console.log("insufficient bank balance");
-        }
-        sender.blance-=amount
-        receiver.blance+=amount
-
-        console.log("transaction successfull");
-        console.log("sender balance",sender.blance);
-        console.log("receiver balance",receiver.blance);
     }
 }
 const accntHolder=new Bank
 console.log(accntHolder.validateAccount(1002)?"Valid Account":"Invalid Account");
 accntHolder.authenticate(1002,"userthree")
 accntHolder.balance(1003)
-accntHolder.fundTransfer(1000,1001,"userone",1000)
+accntHolder.fundTransfer(1000,1001,1000)

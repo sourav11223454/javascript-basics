@@ -27,7 +27,7 @@ JAVASCRIPT
              -the first letter should be either letter or underscore
              -cannot use keyword as identifier
 
--keywords : reserved words ex:if,selse switch,break etc.
+-keywords : reserved words ex:if,else,switch,break etc.
 
 -Variable : used to store data temporarily
 
@@ -118,6 +118,9 @@ JAVASCRIPT
 
      9.Spread Operator(...) : used to expand(spread out) elements of an array,
        object or iterable into individual element
+
+     10.Rest Operator(...) : used to collect multiple values into a single variable
+        (usually as an array)
 
 -Conditional Statements in JS
   -if
@@ -364,5 +367,46 @@ it models real-world entities(like student,car,bank account) as object in softwa
           it is used to access properties and methods belonging to the same object.
  -constructor: is a special method in a class that is automatically called when an object is created.
                it is mainly used to initialize object properties.
+
+-OOP Features
+
+     -inheritance:Acquirng properties and methods of one class into another class
+                  -inheritance btwn classes is known as "classical inheritance"
+                  -inheritance btwn objects is known as "prototype inheritance"
+
+     -polymorphism : one method can perform different taska based on the object.simply,same name different behaviour
+
+     -encapsulation : binding data(variables),and methods(functions) together into a single unit and restricting direct access
+                      to some data.simply,
+                      = data hiding + wrapping into one unit = encapsulation.
+     -abstraction : hiding internal implementation details and showing only the necessary features to the user
+
+
+JAVASCRIPT-FRONT END CONCEPT
+============================
+-inorder to give behaviour to your webpages
+-ways to apply js in web programmers
+      -internal js : use <script> tag to provide js code in html
+      -external js : link external js file with HTML using <script> tag
+
+-DOM(Document Object Model)
+  
+   it is a tree like structure representation of HTML Document that allows js to access,modify,add,or 
+   delete HTML elements of a webpage dynamically
+
+      when a page loads in the browser
+
+           -browser reads the html Document
+           -converts into a tree-like structure(DOM)
+           -each html tag becomes an object(node)
+           -js can access these object using DOM
+
+       -selecting html elements into js code
+
+          -using tag name : document.getElementsByTagName('tagname')
+          -using ID : document.getElementById('id name')
+          -using class : document.getElementByClassName('class')
+          -selects only the first matching element : document.querySelector('tagname'/'#id'/'.class')
+          -selects all matching element : document.querySelectorAll('tagname'/'#id'/'.class')
 
                              
