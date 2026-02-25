@@ -15,7 +15,3 @@ console.log(nameArray);
 nameArray.splice(2,1,"varada")
 console.log(nameArray);
 console.log(nameArray.join('=='));
-
-
-
-

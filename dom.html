@@ -8,10 +8,17 @@
 <body>
     <h1 id="main">DOM</h1>
     <h1>Document Object Model</h1>
-    <p class="grp">accessing dom elements</p>
+    <p id="p1" class="grp">accessing dom elements</p>
     <ul class="grp">
         <li>using tagname</li>
         <li>using id</li>
     </ul>
 </body>
+<script>
+        let newPara=document.createElement("p")
+        newPara.textContent="this is new paragraph"
+        document.body.appendChild(newPara)
+        document.getElementById('p1')
+        p1.remove()
+    </script>
 </html>

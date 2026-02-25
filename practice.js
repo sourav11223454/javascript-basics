@@ -1013,46 +1013,186 @@
 // console.log(products.reduce((sum,b)=>sum+b.price,0)/products.length);
 
 // --------2---------
-orders = [
-    {
-        oid: 1,
-        customer: "Rahul",
-        items: [
-            {name: "Laptop", price: 50000},
-            {name: "Mouse", price: 500}
-        ]
-    },
-    {
-        oid: 2,
-        customer: "Anita",
-        items: [
-            {name: "Phone", price: 30000},
-            {name: "Charger", price: 800}
-        ]
-    },
-    {
-        oid: 3,
-        customer: "Kiran",
-        items: [
-            {name: "Tablet", price: 20000},
-            {name: "Cover", price: 700}
-        ]
+// orders = [
+//     {
+//         oid: 1,
+//         customer: "Rahul",
+//         items: [
+//             {name: "Laptop", price: 50000},
+//             {name: "Mouse", price: 500}
+//         ]
+//     },
+//     {
+//         oid: 2,
+//         customer: "Anita",
+//         items: [
+//             {name: "Phone", price: 30000},
+//             {name: "Charger", price: 800}
+//         ]
+//     },
+//     {
+//         oid: 3,
+//         customer: "Kiran",
+//         items: [
+//             {name: "Tablet", price: 20000},
+//             {name: "Cover", price: 700}
+//         ]
+//     }
+// ]
+// // Print ALL item names
+// orders.map(d=>d.items).flat().forEach(d=>console.log(d.name))
+// // Calculate TOTAL REVENUE
+// console.log(orders.map(d=>d.items).flat().reduce((sum,b)=>sum+b.price,0));
+// // Find MOST expensive item
+// console.log(orders.map(d=>d.items).flat().reduce((a,b)=>a.price>b.price?a:b).name);
+// // Find customer who spent MOST money
+// orders.filter(d=>d.items.some(d=>d.price>40000)).forEach(d=>console.log(d.customer))
+// // Print customers who bought items costing < 100
+// orders.filter(d=>d.items.some(d=>d.price<1000)).forEach(d=>console.log(d.customer))
+// // Check if ANY order contains item > 60000
+// console.log(orders.items.some(d=>d.price>60000));
+// // Count TOTAL number of items
+// console.log(orders.map(d=>d.items).flat().length);
+
+// ---------DAY-12----------
+// ----------1------------
+// class vehicle{
+//     brand
+//     price
+
+//     constructor(brand,price){
+//        this.brand=brand
+//        this.price=price
+//     }
+
+//     displayData(){
+//         console.log(`brand ${this.brand}
+//             price ${this.price}`);
+        
+//     }
+// }
+// let car=new vehicle('bmw',5000000)
+// car.displayData()
+
+// // --------2--------
+// let calculator={
+//     add(a,b){
+//         return a+b
+//     },
+//     substract(a,b){
+//         return a-b
+//     },
+//     multiply(a,b){
+//         return a*b
+//     }
+// }
+// console.log(calculator.add(10,20));
+// console.log(calculator.substract(10,20));
+
+// // ------3------
+// class Human{
+//     name
+//     age
+
+//     constructor(name,age){
+//         this.name=name
+//         this.age=age
+//     }
+//     introduce(){
+//         console.log(`hi im ${this.name},age ${this.age}`);
+//     }
+//     canVote(){
+//         if(this.age>=18){
+//             console.log("eligible");
+//         }else{
+//             console.log("not eligible");
+//         }
+//     }
+//     getBirthYear(currentYear){
+//         let birthYear=currentYear-this.age
+//         console.log(birthYear);
+        
+//     }
+//     updateAge(newAge){
+//         this.age=newAge
+//     }
+//     rename(newName){
+//         this.name=newName
+//     }
+// }
+// const person=new Human('Rahul',25)
+// person.introduce()
+// person.canVote()
+// person.updateAge(30)
+// person.introduce()
+// person.getBirthYear(2026)
+// person.rename('ashkar')
+// person.introduce()
+
+// --------4--------
+class Bank{
+    AccountHolder
+    Balance
+
+    constructor(AccountHolder,Balance){
+        this.AccountHolder=AccountHolder
+        this.Balance=Balance
     }
-]
-// Print ALL item names
-orders.map(d=>d.items).flat().forEach(d=>console.log(d.name))
-// Calculate TOTAL REVENUE
-console.log(orders.map(d=>d.items).flat().reduce((sum,b)=>sum+b.price,0));
-// Find MOST expensive item
-console.log(orders.map(d=>d.items).flat().reduce((a,b)=>a.price>b.price?a:b).name);
-// Find customer who spent MOST money
-orders.filter(d=>d.items.some(d=>d.price>40000)).forEach(d=>console.log(d.customer))
-// Print customers who bought items costing < 100
-orders.filter(d=>d.items.some(d=>d.price<1000)).forEach(d=>console.log(d.customer))
-// Check if ANY order contains item > 60000
-console.log(orders.items.some(d=>d.price>60000));
-// Count TOTAL number of items
-console.log(orders.map(d=>d.items).flat().length);
+    DisplayDetails(){
+        console.log(`Accountholder : ${this.AccountHolder}`);
+        console.log(`balance : ${this.Balance}`);
+    }
+    Deposit(AddMoney){
+        this.Balance+=AddMoney
+        console.log(`successfully deposited ${AddMoney}`);
+    }
+    WithDraw(amount){
+        if(amount<=0){
+            console.log('cannot withdraw negative money');
+        }
+        else if(this.Balance>=amount){
+            this.Balance-=amount
+            console.log(`withdrawn ${amount}`);
+        }
+        else{
+            console.log("insufficient balance");
+        }
+    }
+    DisplayBalance(){
+        console.log(`Accountholder : ${this.AccountHolder}`);
+        console.log(`balance : ${this.Balance}`);
+    }
+    Transfer(Amount,toAcc){
+       if(this===toAcc){
+            console.log("cannot transfer to same account");
+        }
+        else if(this.Balance>=Amount){
+           this.Balance-=Amount
+           toAcc.Balance+=Amount
+           console.log(`Transferred ${Amount} to ${toAcc.AccountHolder}`);
+        }
+        else{
+            console.log("insufficient balance");
+        }
+    }
+    applyInterest(rate){
+       let interest=this.Balance*rate/100
+       this.Balance+=interest
+       console.log(this.Balance);
+    }
+}
+const Details=new Bank("midhul",1000)
+const acc2 = new Bank("Anita", 2000);
+Details.DisplayDetails()
+Details.Deposit(2000)
+Details.WithDraw(500)
+Details.DisplayBalance()
+Details.Transfer(300,acc2)
+Details.applyInterest(10)
+
+
+
+
 
 
 

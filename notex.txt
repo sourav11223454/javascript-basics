@@ -164,7 +164,7 @@ JAVASCRIPT
 
                 }
 
--looping Statements : are used to repeate a block of code multiple times as long as a given conditionis true
+-looping Statements : are used to repeat a block of code multiple times as long as a given condition is true
                  -for loop
                         Syntax:
                                for(initialization;condition;increment/decrement){
@@ -210,8 +210,7 @@ JAVASCRIPT
 
           -callback function : a function definition inside a function call,completes its execution only after
           the completion of the function inside it.
-          -anonymous function :self executing function and nameless function 
-
+          -anonymous function :self executing function and nameless function.
           -nested function : function definiton inside another funtion definition      
                            -Closure is the ability of a nested function to
                             access and remember variables from its outer
@@ -408,5 +407,34 @@ JAVASCRIPT-FRONT END CONCEPT
           -using class : document.getElementByClassName('class')
           -selects only the first matching element : document.querySelector('tagname'/'#id'/'.class')
           -selects all matching element : document.querySelectorAll('tagname'/'#id'/'.class')
+
+       -DOM Methods
+          -createElement()-create new HTML element
+          -textContent/innerHTML/innerText-adds contents
+          -appendChild-adds element to webpage
+          -remove()-to remove element from webpage
+
+-Events : an event in js is an action or occurance that happens in the 
+          browser,which js can detect and respond to
+
+          user action                 Event name
+         ----------------------------------------
+          click button                  click
+          move mouse                    mouseover
+          press keyboard                keydown
+          submit form                   submit
+          load page                     load
+
+       -ways to handle events in js
+
+        -inline eventhandling (HTML elements)
+        -using DOM property
+        -using addEventListener()
+               syntax:element.addEventListener("event_name",event_handler)
+
+        -Event capturing and event bubbling are mechanisms of event propagation in
+         the DOM that controls the order in which event handlers are executed from
+         parent to child or child to parent
+
 
                              
