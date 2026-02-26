@@ -265,7 +265,18 @@ JAVASCRIPT
                         it return either smallest/largest/total sum of elements
                         in an array 
                         syntax: 
-                               array.reduce((accumalator))
+                               array.reduce((accumulator,currentValue,index,array)=>
+                               {
+                                   return updatedAccumulator;
+                               },initialValue)
+
+                            parameters:
+
+                            -accumalator : stores the result
+
+                            -currentValue : current element
+
+                            -initialValue : starting value (important)
 
             -some() : used to check whether atleast one element in an array satisfies
                       a given condition (return boolean value)   

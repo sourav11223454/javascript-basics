@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="m-5">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/014/219/604/small/safety-login-page-3d-illustration-free-png.png" alt="" width="200px" height="200px">
+        </div>
+       <div>
+            <form class="m-5">
+                <div>
+                    <h1>SIGN IN</h1>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input  type="text" class="form-control" id="inputName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+              <button onclick="loginPage()" class="btn btn-primary">Login</button>
+            </form>
+       </div>
+    </div>
+</body>
+<script>
+    const loginPage=()=>{
+        let name=document.getElementById('inputName').value
+        let password=document.getElementById('inputPassword').value
+        if(name && password){
+            sessionStorage.setItem('name',name)
+            sessionStorage.setItem('password',password)
+            
+            window.location="dash.html"
+        }else{
+            alert('enter login details')
+        }
+    }
+</script>
+</html>
