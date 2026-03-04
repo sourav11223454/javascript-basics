@@ -448,4 +448,55 @@ JAVASCRIPT-FRONT END CONCEPT
          parent to child or child to parent
 
 
-                             
+-API(Application Programming Interface)
+
+     -It is a bridge that allows two applications to communicate with each other
+
+     URL=>Uniform Resource Locater
+
+     https://jsonplaceholder.typicode.com/   //base URL
+    https://jsonplaceholder.typicode.com/users  URI-iniform resource identifier
+    https://jsonplaceholder.typicode.com/users/2  2-path parameter
+    https://jsonplaceholder.typicode.com/users?search=calicut  //query parameter
+                                                               //body parameter
+
+    -API ARCHITECTURE
+       -REST(Represntational Sate Tranfer Protocol) API : HTTP+JSON
+       -GraphQL API
+       -SOAP(Simple Object Access Protocol) API : http,XML
+
+     -JSON(Javascript Object Notation)
+         {"key":value}
+
+     
+     -HTTP Methods:
+         -GET - to get data from server to client
+         -POST - to store/add data to the server
+         -PUT/PATCH - to edit/update existing data
+         -DELETE - to remove a data from server
+
+     -HTTP RESPONSE code
+          -1XX   -INFORMATION
+          -2XX   -SUCCESS
+          -3XX   -REDIRECTION
+          -4XX   -CLIENT ERROR
+          -5XX   -SERVER ERROR
+          
+-There are two type of functions :
+   -synchronous function :
+       -execute one by one
+       -next line waits until current line finishes
+   -asynchronous function :
+       -does not wait
+       -non-blocking behaviour
+       -long tasks run in background
+
+-Promise : promise is a js object that represnts the result of an asynchronous operations
+     promise has 3 states:
+       -pending : still waiting
+       -fullfilled(resolved) : success
+       rejected : failed
+       
+-The ways we can do api in js
+    
+     -using XMLHTTPRequest
