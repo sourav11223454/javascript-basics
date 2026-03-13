@@ -10,19 +10,37 @@
 </head>
 
 <body>
-    <div>
-        <div class="text-center d-flex align-items-center justify-content-center">
-
-        </div>
-        <div class="text-center d-flex align-items-center justify-content-center" style="height:100vh;">
-            <h1>Lottery winning Contest</h1>
-            <button type="submit" class="btn btn-primary">Submit</button>
+    <div style="min-height: 100vh;background-color: black;" class="d-flex align-items-center justify-content-center flex-column">
+        <h1 class="text-danger my-5">Lottery Contest</h1>
+        <button onclick="check()" class="btn btn-success">Check</button>
+        <div id="output">
 
         </div>
     </div>
 </body>
 <script>
+   const check=()=>{
+     const LuckyContest=new Promise((resolve,reject)=>{
 
+        const myTicketNumber=3
+        const WinningNumber=Math.floor(Math.random()*10)+1
+        console.log(WinningNumber);
+        
+
+        if(myTicketNumber==WinningNumber){
+            resolve('you won the lottery')
+        }else{
+            reject('better luck next time')
+        }
+    })
+     LuckyContest.then(res=>{
+            output.innerHTML=res
+            output.style.color="yellow"
+        }).catch(err=>{
+            output.innerHTML=err
+            output.style.color="red"
+        })
+   }
 </script>
 
 </html>

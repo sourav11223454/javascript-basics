@@ -384,7 +384,7 @@ it models real-world entities(like student,car,bank account) as object in softwa
                   -inheritance btwn classes is known as "classical inheritance"
                   -inheritance btwn objects is known as "prototype inheritance"
 
-     -polymorphism : one method can perform different taska based on the object.simply,same name different behaviour
+     -polymorphism : one method can perform different tasks based on the object.simply,same name different behaviour
 
      -encapsulation : binding data(variables),and methods(functions) together into a single unit and restricting direct access
                       to some data.simply,
@@ -491,12 +491,21 @@ JAVASCRIPT-FRONT END CONCEPT
        -non-blocking behaviour
        -long tasks run in background
 
--Promise : promise is a js object that represnts the result of an asynchronous operations
+-Promise : promise is a js object that represents the result of an asynchronous operations
      promise has 3 states:
        -pending : still waiting
        -fullfilled(resolved) : success
-       rejected : failed
+       -rejected : failed
        
 -The ways we can do api in js
     
      -using XMLHTTPRequest
+     -using fetch() method
+
+     -async-await keyword:are keywords in js used to handle asynchronous (promise) operations (like api calls)
+       in a clean and synchronous-looking way 
+
+          -async keyword : the 'async' keyword is used before a function to make it asynchronous
+
+          -await keyword : the await keyword is used inside an asynchronous function
+           to wait for a promise to resolve.139557
